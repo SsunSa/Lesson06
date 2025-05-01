@@ -6,110 +6,102 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Black Goose Bistro Summer Menu</title>
-  <link href="https://fonts.googleapis.com/css?family=Marko+One" rel="stylesheet" type="text/css" />
-
   <style>
     /* Base styles */
     body {
-      font-family: Georgia, serif;
-      font-size: 1rem;
-      line-height: 1.75;
-      margin: 0 15%;
-      background: #d2dc9d url(images/blackgoose.png) no-repeat center 6.25rem fixed;
+        font-family: Georgia, serif;
+        font-size: 1rem;
+        line-height: 1.75;
+        margin: 0 15%;
+        background: #d2dc9d;
     }
 
     /* Header styles */
     header {
-      margin-top: 0;
-      padding: 3rem 1rem 2rem 1rem;
-      text-align: center;
-      background: 
-        url(images/purpledot.png) left top repeat-y,
-        url(images/purpledot.png) right top repeat-y,
-        url(images/gooseshadow.png) 90% bottom no-repeat;
-      background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 0;
+        padding: 3rem 1rem 2rem 1rem;
+        text-align: center;
+        background: 
+          url('images/purpledot.png') left top repeat-y,
+          url('images/purpledot.png') right top repeat-y,
+          url('images/gooseshadow.png') 90% bottom no-repeat;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Styling for images used as background */
+    .header-logo-container {
+        background-image: url('blackgoose.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px; /* Adjust the height as needed */
+        width: 100%; /* Full width of the container */
+        display: block;
+        background-size: contain;
+        visibility: hidden; /* Hide the image itself */
+    }
+
+    .goose-shadow-container {
+        background-image: url('gooseshadow.png');
+        background-repeat: no-repeat;
+        background-position: 90% bottom;
+        height: 200px;
+        width: 100%;
+        background-size: contain;
+        visibility: hidden;
+    }
+
+    .purple-dot-container {
+        background-image: url('purpledot.png');
+        background-repeat: repeat-y;
+        height: 100px; /* Adjust the height as needed */
+        width: 100%;
+        background-size: contain;
+        visibility: hidden;
     }
 
     /* Main heading */
     h1 {
-      color: #939;
-      font-size: 2rem;
+        color: #939;
+        font-size: 2rem;
     }
 
     /* Subheadings */
     h2 {
-      color: #c60;
-      font-size: 1.5rem;
-      margin-top: 2rem;
+        color: #c60;
+        font-size: 1.5rem;
+        margin-top: 2rem;
     }
 
     /* Paragraphs */
     p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
     }
 
     /* Links */
     a:link {
-      color: #939;
-      text-decoration: none;
+        color: #939;
+        text-decoration: none;
     }
 
     a:visited {
-      color: #937393;
+        color: #937393;
     }
 
     a:hover,
     a:focus {
-      color: #c700f2;
-      background-color: #fff;
+        color: #c700f2;
+        background-color: #fff;
     }
 
     a:active {
-      color: #ff00ff;
-      background-color: #fff;
+        color: #ff00ff;
+        background-color: #fff;
     }
 
     /* Optional: Styling for navigation or other sections if needed */
     nav, section, article, aside, footer {
-      margin-top: 2rem;
-    }
-
-    /* Section and List styles */
-    section {
-      margin-bottom: 2rem;
-    }
-
-    dl {
-      margin-left: 1.5rem;
-    }
-
-    dt {
-      font-weight: bold;
-    }
-
-    dd {
-      margin-bottom: 0.5rem;
-    }
-
-    .price {
-      color: #c60;
-      font-weight: bold;
-    }
-
-    .newitem {
-      color: #f00;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background-color: #f9f9f9;
-    }
-
-    .warning {
-      font-size: 0.9rem;
-      color: #d00;
+        margin-top: 2rem;
     }
   </style>
 </head>
@@ -117,12 +109,6 @@
 <body>
   <header>
     <h1>Black Goose Bistro &bull; Summer Menu</h1>
-    <!-- Black Goose Logo with fixed background -->
-    <img src="blackgoose.png" alt="Black Goose Bistro Logo" class="header-logo">
-    <!-- Gooseshadow image at bottom-right fixed in background -->
-    <img src="gooseshadow.png" alt="Goose Shadow" class="goose-shadow">
-    <!-- Purple dot pattern repeating vertically -->
-    <img src="purpledot.png" alt="Purple Dot Decoration" class="purple-dot">
 
     <div id="info">
       <p>
@@ -139,112 +125,114 @@
     </div>
   </header>
 
-  <section id="appetizers">
-    <h2>Appetizers</h2>
-    <p>
-      This season, we explore the spicy flavors of the southwest in our appetizer collection.
-    </p>
+  <main>
+    <section id="appetizers">
+      <h2>Appetizers</h2>
+      <p>
+        This season, we explore the spicy flavors of the southwest in our appetizer collection.
+      </p>
 
-    <dl>
-      <dt>Black Bean Purses</dt>
-      <dd>
-        Spicy black beans and a blend of Mexican cheeses wrapped in sheets of phyllo and baked until golden.
-        <span class="price">$3.95</span>
-      </dd>
+      <dl>
+        <dt>Black Bean Purses</dt>
+        <dd>
+          Spicy black beans and a blend of Mexican cheeses wrapped in sheets of phyllo and baked until golden.
+          <span class="price">$3.95</span>
+        </dd>
 
-      <dt class="newitem">Southwestern Napoleons with Lump Crab &mdash; <strong>New Item!</strong></dt>
-      <dd>
-        Layers of light lump crab meat, bean and corn salsa, and our handmade flour tortillas.
-        <span class="price">$7.95</span>
-      </dd>
-    </dl>
-  </section>
+        <dt class="newitem">Southwestern Napoleons with Lump Crab &mdash; <strong>New Item!</strong></dt>
+        <dd>
+          Layers of light lump crab meat, bean and corn salsa, and our handmade flour tortillas.
+          <span class="price">$7.95</span>
+        </dd>
+      </dl>
+    </section>
 
-  <section id="entrees">
-    <h2>Main Courses</h2>
-    <p>
-      Big, bold flavors are the name of the game this summer. Allow us to assist you with finding the perfect wine.
-    </p>
+    <section id="entrees">
+      <h2>Main Courses</h2>
+      <p>
+        Big, bold flavors are the name of the game this summer. Allow us to assist you with finding the perfect wine.
+      </p>
 
-    <dl>
-      <dt class="newitem">Jerk Rotisserie Chicken with Fried Plantains &mdash; <strong>New Item!</strong></dt>
-      <dd>
-        Tender chicken slow-roasted on the rotisserie, flavored with spicy and fragrant jerk sauce and served with fried plantains and fresh mango.
-        <strong>Very spicy.</strong>
-        <span class="price">$12.95</span>
-      </dd>
+      <dl>
+        <dt class="newitem">Jerk Rotisserie Chicken with Fried Plantains &mdash; <strong>New Item!</strong></dt>
+        <dd>
+          Tender chicken slow-roasted on the rotisserie, flavored with spicy and fragrant jerk sauce and served with fried plantains and fresh mango.
+          <strong>Very spicy.</strong>
+          <span class="price">$12.95</span>
+        </dd>
 
-      <dt>Shrimp Sate Kebabs with Peanut Sauce</dt>
-      <dd>
-        Skewers of shrimp marinated in lemongrass, garlic, and fish sauce, grilled to perfection. Served with spicy peanut sauce and jasmine rice.
-        <span class="price">$12.95</span>
-      </dd>
+        <dt>Shrimp Sate Kebabs with Peanut Sauce</dt>
+        <dd>
+          Skewers of shrimp marinated in lemongrass, garlic, and fish sauce, grilled to perfection. Served with spicy peanut sauce and jasmine rice.
+          <span class="price">$12.95</span>
+        </dd>
 
-      <dt>Grilled Skirt Steak with Mushroom Fricassée</dt>
-      <dd>
-        Flavorful skirt steak marinated in Asian flavors, grilled as you like it<sup>*</sup>. Served over a blend of sautéed wild mushrooms with a side of blue cheese mashed potatoes.
-        <span class="price">$16.95</span>
-      </dd>
-    </dl>
-  </section>
+        <dt>Grilled Skirt Steak with Mushroom Fricassée</dt>
+        <dd>
+          Flavorful skirt steak marinated in Asian flavors, grilled as you like it<sup>*</sup>. Served over a blend of sautéed wild mushrooms with a side of blue cheese mashed potatoes.
+          <span class="price">$16.95</span>
+        </dd>
+      </dl>
+    </section>
 
-  <section id="toast">
-    <h2>Traditional Toasts</h2>
-    <p>
-      The ultimate comfort food, our traditional toast recipes are adapted from
-      <a href="http://www.gutenberg.org/files/13923/13923-h/13923-h.htm"><cite>The Whitehouse Cookbook</cite></a>
-      published in 1887.
-    </p>
+    <section id="toast">
+      <h2>Traditional Toasts</h2>
+      <p>
+        The ultimate comfort food, our traditional toast recipes are adapted from
+        <a href="http://www.gutenberg.org/files/13923/13923-h/13923-h.htm"><cite>The Whitehouse Cookbook</cite></a>
+        published in 1887.
+      </p>
 
-    <dl>
-      <dt>Cream Toast</dt>
-      <dd>
-        Simple cream sauce over the highest quality toasted bread, baked daily.
-        <span class="price">$3.95</span>
-      </dd>
+      <dl>
+        <dt>Cream Toast</dt>
+        <dd>
+          Simple cream sauce over the highest quality toasted bread, baked daily.
+          <span class="price">$3.95</span>
+        </dd>
 
-      <dt>Mushroom Toast</dt>
-      <dd>
-        Layers of light lump crab meat, bean and corn salsa, and our handmade flour tortillas.
-        <span class="price">$6.95</span>
-      </dd>
+        <dt>Mushroom Toast</dt>
+        <dd>
+          Layers of light lump crab meat, bean and corn salsa, and our handmade flour tortillas.
+          <span class="price">$6.95</span>
+        </dd>
 
-      <dt>Nun's Toast</dt>
-      <dd>
-        Onions and hard-boiled eggs in a cream sauce over buttered hot toast.
-        <span class="price">$6.95</span>
-      </dd>
+        <dt>Nun's Toast</dt>
+        <dd>
+          Onions and hard-boiled eggs in a cream sauce over buttered hot toast.
+          <span class="price">$6.95</span>
+        </dd>
 
-      <dt>Apple Toast</dt>
-      <dd>
-        Sweet, cinnamon stewed apples over delicious buttery grilled bread.
-        <span class="price">$6.95</span>
-      </dd>
-    </dl>
-  </section>
+        <dt>Apple Toast</dt>
+        <dd>
+          Sweet, cinnamon stewed apples over delicious buttery grilled bread.
+          <span class="price">$6.95</span>
+        </dd>
+      </dl>
+    </section>
 
-  <section id="dessert">
-    <h2>Dessert Selection</h2>
-    <p>
-      Be sure to save room for our desserts, made daily by our own
-      <a href="http://www.jwu.edu/college.aspx?id=19510">Johnson & Wales</a>
-      trained pastry chef.
-    </p>
+    <section id="dessert">
+      <h2>Dessert Selection</h2>
+      <p>
+        Be sure to save room for our desserts, made daily by our own
+        <a href="http://www.jwu.edu/college.aspx?id=19510">Johnson & Wales</a>
+        trained pastry chef.
+      </p>
 
-    <dl>
-      <dt class="newitem">Lemon Chiffon Cake &mdash; <strong>New Item!</strong></dt>
-      <dd>
-        Light and citrus-flavored sponge cake with buttercream frosting as light as a cloud.
-        <span class="price">$2.95</span>
-      </dd>
+      <dl>
+        <dt class="newitem">Lemon Chiffon Cake &mdash; <strong>New Item!</strong></dt>
+        <dd>
+          Light and citrus-flavored sponge cake with buttercream frosting as light as a cloud.
+          <span class="price">$2.95</span>
+        </dd>
 
-      <dt class="newitem">Molten Chocolate Cake</dt>
-      <dd>
-        Bubba's special dark chocolate cake with a warm, molten center. Served with or without a splash of almond liqueur.
-        <span class="price">$3.95</span>
-      </dd>
-    </dl>
-  </section>
+        <dt class="newitem">Molten Chocolate Cake</dt>
+        <dd>
+          Bubba's special dark chocolate cake with a warm, molten center. Served with or without a splash of almond liqueur.
+          <span class="price">$3.95</span>
+        </dd>
+      </dl>
+    </section>
+  </main>
 
   <footer>
     <p class="warning">
